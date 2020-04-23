@@ -8,7 +8,7 @@ export default class ClickWise {
     }
 
     async campaigns(){
-        return await this.api.campaigns();
+        return await this.api.campaigns(0, 1000);
     }
 
     async coupons(){

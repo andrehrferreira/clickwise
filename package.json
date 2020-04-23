@@ -1,6 +1,6 @@
 {
     "name": "@vigiadepreco/clickwise",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "API integration with ClickWise",
     "main": "./build/index.js",
     "scripts": {
@@ -42,6 +42,6 @@
         "mocha": "^6.0.1"
     },
     "dependencies": {
-        "@vigiadepreco/postaffiliatepro": "^2.0.0"
+        "@vigiadepreco/postaffiliatepro": "^2.0.1"
     }
 }
