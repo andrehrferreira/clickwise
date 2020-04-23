@@ -1,6 +1,6 @@
 {
     "name": "@vigiadepreco/clickwise",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "API integration with ClickWise",
     "main": "./build/index.js",
     "scripts": {
