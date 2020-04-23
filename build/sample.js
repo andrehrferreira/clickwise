@@ -19,21 +19,21 @@ _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
       switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
-          return clickwise.campaigns();
+          return clickwise.campaigns(0, 100);
 
         case 2:
           campaigns = _context.sent;
           console.log(campaigns); //Coupons
 
           _context.next = 6;
-          return clickwise.coupons();
+          return clickwise.coupons(0, 100);
 
         case 6:
           coupons = _context.sent;
           console.log(coupons); //Banners
 
           _context.next = 10;
-          return clickwise.banners();
+          return clickwise.banners(0, 100);
 
         case 10:
           banners = _context.sent;
