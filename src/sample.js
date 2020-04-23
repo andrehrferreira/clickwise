@@ -6,7 +6,7 @@ const clickwise = new ClickWise("user", "pass");
 
 (async () => {
     //Campaigns
-    let campaigns = await clickwise.campaigns(0 ,100);
+    let campaigns = await clickwise.campaigns(0, 1);
     console.log(campaigns);
 
     //Coupons
