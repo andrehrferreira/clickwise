@@ -1,19 +1,8 @@
-# @vigiadepreco/clickwise
+import "@babel/polyfill/noConflict";
 
-API integration with ClickWise
+import ClickWise from "./index";
 
-## Install
-
-```bash
-$ yarn add @vigiadepreco/clickwise --save
-```
-
-## Usage
-
-```js
-import Clickwise from "@vigiadepreco/clickwise";
-
-const clickwise = new Clickwise("user", "pass");
+const clickwise = new ClickWise("user", "pass");
 
 (async () => {
     //Campaigns
@@ -36,4 +25,3 @@ const clickwise = new Clickwise("user", "pass");
     let deeplink = await clickwise.deeplink("https://www.franciscajoias.com.br/", "245cc698");
     console.log(deeplink);
 })();
-```
