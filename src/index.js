@@ -7,23 +7,27 @@ export default class ClickWise {
         this.api = new PostAffiliatePro("https://my.pampanetwork.com/scripts/server.php", "https://my.pampanetwork.com/affiliates/login.php", username, password);
     }
 
-    async campaigns(){
-        return await this.api.campaigns(0, 1000);
+    async command(data){
+        return await this.api.command(data);
     }
 
-    async coupons(){
-        return await this.api.promo(20, 0, 1000);
+    async campaigns(offset, limit){
+        return await this.api.campaigns(offset, limit);
     }
 
-    async banners(){
+    async coupons(offset, limit){
+        return await this.api.promo(20, offset, limit);
+    }
+
+    async banners(offset, limit){
         return await this.api.command({
             "C": "Gpf_Rpc_Server",
             "M": "run",
             "requests": [{
                 "C": "Pap_Affiliates_Promo_BannersGrid",
                 "M": "getRows",
-                "offset": 0, 
-                "limit": 1000,
+                "offset": offset, 
+                "limit": limit,
                 "filters": [["type","IN","I"]],
                 "columns": [["id"],["destinationurl"],["name"],["campaignid"],["campaignname"],["bannercode"],["bannerdirectlinkcode"],["bannerpreview"],["rtype"],["displaystats"],["channelcode"],["campaigndetails"]]
             }]
